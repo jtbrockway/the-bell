@@ -57,6 +57,8 @@ function GameCard(props) {
     const message = `${messageMention} ${props.user} has rung the bell for ${props.name}`;
 
     setDisableBell(true);
+
+    console.log(process.env.REACT_APP_DISCORD_WEBHOOK);
     fetch(
       process.env.REACT_APP_DISCORD_WEBHOOK,
       {
