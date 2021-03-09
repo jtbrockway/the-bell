@@ -13,6 +13,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Endpoints from '../config/endpointsConfig.json';
 import Users from '../config/usersConfig.json'
 
 const useStyles = makeStyles((theme) => ({
@@ -57,11 +58,8 @@ function GameCard(props) {
     const message = `${messageMention} ${props.user} has rung the bell for ${props.name}`;
 
     setDisableBell(true);
-
-    console.log(process.env.REACT_APP_DISCORD_WEBHOOK);
-    console.log(process.env);
     fetch(
-      process.env.REACT_APP_DISCORD_WEBHOOK,
+      Endpoints.discordWebHook,
       {
         method: 'post',
         headers: {

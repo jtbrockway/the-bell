@@ -5,8 +5,6 @@ import Login from './components/Login.js';
 import Box from '@material-ui/core/Box';
 
 function App() {
-  require('dotenv').config();
-
   const [loggedIn, setLoggedIn] = React.useState(false)
   const [user, setUser] = React.useState('');
 
