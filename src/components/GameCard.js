@@ -59,6 +59,7 @@ function GameCard(props) {
     setDisableBell(true);
 
     console.log(process.env.REACT_APP_DISCORD_WEBHOOK);
+    console.log(process.env);
     fetch(
       process.env.REACT_APP_DISCORD_WEBHOOK,
       {
