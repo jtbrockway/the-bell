@@ -25,11 +25,11 @@ jobs:
         run: npm install
 			
       #Builds the react app
-      -name: Build React App
+      - name: Build React App
 				run: npm run build
 			
       #Deploys to gh-pages
-      -name: Deploy to gh-pages
+      - name: Deploy to gh-pages
        run: |
         git config --global user.name ${{secrets.USER_NAME}}
         git config --global user.email ${{secrets.USER_EMAIL}}
