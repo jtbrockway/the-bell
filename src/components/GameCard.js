@@ -13,7 +13,6 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Endpoints from '../config/endpointsConfig.json';
 import Users from '../config/usersConfig.json'
 
 const useStyles = makeStyles((theme) => ({
