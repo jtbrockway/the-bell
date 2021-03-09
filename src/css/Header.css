@@ -1,0 +1,9 @@
+.Root {
+	flex-grow: 1;
+}
+
+.Appbar {
+	align-items: center;
+	padding: 10px;
+	margin-bottom: 20px;
+}
