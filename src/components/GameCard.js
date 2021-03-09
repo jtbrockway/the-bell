@@ -59,7 +59,7 @@ function GameCard(props) {
 
     setDisableBell(true);
     fetch(
-      Endpoints.discordWebHook,
+      process.env.DISCORD_WEBHOOK,
       {
         method: 'post',
         headers: {
