@@ -23,11 +23,11 @@ jobs:
       # Installs npm dependencies
       - name: Install dependencies
         run: npm install
-			
+
       #Builds the react app
       - name: Build React App
       	run: npm run build
-			
+
       #Deploys to gh-pages
       - name: Deploy to gh-pages
       	run: |
