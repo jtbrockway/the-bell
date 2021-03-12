@@ -13,8 +13,8 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Endpoints from '../config/endpointsConfig.json';
 import Users from '../config/usersConfig.json'
+import endpoints from '../config/endpointsConfig.js';
 
 const useStyles = makeStyles((theme) => ({
   cardActions: {
@@ -44,30 +44,34 @@ function GameCard(props) {
   };
 
   const handleAddMention = (username) => {
-    if(mentions.includes(username)) {
-      setMentions(mentions.filter(user => user !== username));
-      return;
-    }
-    setMentions(oldMentions => [...oldMentions, username]);
+    return (mentions.includes(username) 
+      ? setMentions(mentions.filter(user => user !== username)) 
+      : setMentions(oldMentions => [...oldMentions, username]));
   };
 
   const ringBell = () => {
-    const messageMention = mentions.length 
+    const messageMention = (mentions.length 
       ? Users.filter(user => mentions.includes(user.name)).map(user => user.mention).join(' ')
-      : Users.filter(user => user.name === "Core")[0].mention;
-    const message = `${messageMention} ${props.user} has rung the bell for ${props.name}`;
+      : Users.filter(user => user.name === "Core")[0].mention
+    );
+
+    const data = JSON.stringify({
+      message: messageMention,
+      game: props.game.name,
+      ringer: props.user,
+      slots: props.game.slots,
+      img: props.game.img
+    });
 
     setDisableBell(true);
     fetch(
-      Endpoints.discordWebHook,
+      `${endpoints.BELL_API}/ringBell`,
       {
-        method: 'post',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          content: message
-        }),
+        body: data,
       }
     );
   }
@@ -78,8 +82,8 @@ function GameCard(props) {
         <CardMedia 
           className={classes.media}
           component="img" 
-          src={props.img} 
-          title={props.name}
+          src={props.game.img} 
+          title={props.game.name}
         />
         <CardActions disableSpacing className={classes.cardActions}>
           <IconButton aria-label="Ring the Bell" disabled={disableBell} onClick={ringBell}>

@@ -13,8 +13,7 @@ function GameGrid(props) {
             <Grid item xs={12} sm={4} key={game.name}>
               <GameCard
                 user={props.user}
-                name={game.name} 
-                img={game.img} 
+                game={game} 
               />
             </Grid>
           ))

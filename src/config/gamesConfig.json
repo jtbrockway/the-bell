@@ -1,30 +1,37 @@
 [
   {
     "name": "Rainbow Six: Siege",
-    "img": "https://store-images.s-microsoft.com/image/apps.46555.14552088507516913.65e423fb-c1ae-4e9d-b981-88b268e24f4f.b4566ba8-2fbc-4169-8b48-9a089519c376?mode=scale&q=90&h=720&w=1280&background=%23FFFFFF"
+    "img": "https://store-images.s-microsoft.com/image/apps.46555.14552088507516913.65e423fb-c1ae-4e9d-b981-88b268e24f4f.b4566ba8-2fbc-4169-8b48-9a089519c376?mode=scale&q=90&h=720&w=1280&background=%23FFFFFF",
+    "slots": 5
   },
   {
     "name": "Hunt: Showdown",
-    "img": "https://www.godisageek.com/wp-content/uploads/Hunt-Showdown-review.jpg"
+    "img": "https://www.godisageek.com/wp-content/uploads/Hunt-Showdown-review.jpg",
+    "slots": 3
   },
   {
     "name": "Rocket League",
-    "img": "https://assets.vg247.com/current//2019/01/rocket-league-cross-play.jpg"
+    "img": "https://assets.vg247.com/current//2019/01/rocket-league-cross-play.jpg",
+    "slots": 4
   },
   {
     "name": "Star Wars: Battlefront 2",
-    "img": "https://images.hdqwalls.com/download/star-wars-battlefront-ii-2017-image-1280x720.jpg"
+    "img": "https://images.hdqwalls.com/download/star-wars-battlefront-ii-2017-image-1280x720.jpg",
+    "slots": 4
   },
   {
     "name": "Super Smash Bros",
-    "img": "https://images.hdqwalls.com/download/super-smash-bros-ultimate-8k-wl-1280x720.jpg"
+    "img": "https://images.hdqwalls.com/download/super-smash-bros-ultimate-8k-wl-1280x720.jpg",
+    "slots": 8
   },
   {
     "name": "Ultimate Chicken Horse",
-    "img": "https://www.godisageek.com/wp-content/uploads/ultime-chicken-horse.jpg"
+    "img": "https://www.godisageek.com/wp-content/uploads/ultime-chicken-horse.jpg",
+    "slots": 4
   },
   {
     "name": "Escape from Tarkov",
-    "img": "https://i.ytimg.com/vi/Lioz680IBWg/maxresdefault.jpg"
+    "img": "https://i.ytimg.com/vi/Lioz680IBWg/maxresdefault.jpg",
+    "slots": 4
   }
 ]
