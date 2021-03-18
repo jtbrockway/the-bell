@@ -33,5 +33,10 @@
     "name": "Escape from Tarkov",
     "img": "https://i.ytimg.com/vi/Lioz680IBWg/maxresdefault.jpg",
     "slots": 4
+  },
+  {
+    "name": "Deep Rock Galactic",
+    "img": "https://www.trueachievements.com/customimages/077095.jpg",
+    "slots": 4
   }
 ]
